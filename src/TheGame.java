@@ -9,7 +9,7 @@ import it.randomtower.engine.World;
 
 
 public class TheGame extends World {
-	
+	//List items get added in the constructor for Alien
 	public static ArrayList<Alien> aliens;
 	int collumn = 5;
 	int row = 10;
@@ -44,6 +44,7 @@ public class TheGame extends World {
 	public void update(GameContainer gc, StateBasedGame game, int delta) throws SlickException{
 		super.update(gc, game, delta);
 		if(aliens.size()<= 0){
+			//TODO Change this soon:
 			System.exit(0);
 		}
 	}
