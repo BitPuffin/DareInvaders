@@ -4,7 +4,7 @@ import org.newdawn.slick.state.StateBasedGame;
 
 
 public class AlienAI {
-	public static ArrayList<Alien> aliens;
+	public ArrayList<Alien> aliens;
 	public AlienAI(){
 		aliens = new ArrayList();
 	}

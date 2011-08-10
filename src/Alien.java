@@ -18,7 +18,6 @@ public class Alien extends Entity {
 
 	public Alien(float x, float y) {
 		super(x, y);
-		AlienAI.aliens.add(this);
 		Image img = ResourceManager.getImage("alien");
 		setGraphic(img);
 		setHitBox(0, 0, img.getWidth(), img.getHeight());
