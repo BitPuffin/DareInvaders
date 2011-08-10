@@ -1,0 +1,5 @@
+<sheet>
+	<sprite name="alien.png" x="0" y="0" width="50" height="50" />
+	<sprite name="ship.png" x="0" y="55" width="50" height="50" />
+	<sprite name="shot.png" x="0" y="110" width="25" height="50" />
+</sheet>

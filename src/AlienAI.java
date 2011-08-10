@@ -14,8 +14,8 @@ public class AlienAI {
 	int maxright = 480;
 	int maxleft = 5;
 	
-	boolean AnyBoundrariesCrossed = false;
-	boolean going_right = true;
+	
+	
 	
 	private ArrayList<Alien> aliens;
 	
@@ -33,6 +33,8 @@ public class AlienAI {
 	}
 	
 	public void move(){
+		boolean AnyBoundrariesCrossed = false;
+		boolean going_right = true;
 		
 		for(Alien a : aliens){
 			if (a.x >= maxright || a.x <= maxleft){
@@ -40,12 +42,17 @@ public class AlienAI {
 			}
 			else
 				AnyBoundrariesCrossed = false;
-			
+		}
+		
 			if (AnyBoundrariesCrossed){
 				//I guess I need to loop again or it will only move the one in the current loop?
 				for(Alien b : aliens){
+					b.y += downamount;
 				StepDown(b.y);
 				}
+			}
+			if (AnyBoundrariesCrossed == false){
+				
 			}
 		}
 		
@@ -78,11 +85,11 @@ public class AlienAI {
 			}
 			last_move = delta;
 		}
-		*/
+		
 	}
-	
+	*/
 	private float StepDown(float y) {
-		going_right = !going_right;
+		//going_right = !going_right;
 		return y += downamount;
 	}
 
