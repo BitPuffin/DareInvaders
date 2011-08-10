@@ -10,9 +10,10 @@ import it.randomtower.engine.World;
 
 public class TheGame extends World {
 	//List items get added in the constructor for Alien
-	public static ArrayList<Alien> aliens;
+	//public static ArrayList<Alien> aliens;
 	int collumn = 5;
 	int row = 10;
+	AlienAI ai;
 	
 	public TheGame(int id, GameContainer container) {
 		super(id, container);
@@ -22,9 +23,12 @@ public class TheGame extends World {
 	@Override
 	public void init(GameContainer container, StateBasedGame game)
 			throws SlickException {
+		
+		ai = new AlienAI();
+		
 		super.init(container, game);
 		
-		aliens = new ArrayList();
+		//aliens = new ArrayList();
 		
 		for(int c = collumn; collumn < 400 ; collumn += 52){
 			Alien a = new Alien(collumn, row);

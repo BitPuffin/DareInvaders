@@ -18,7 +18,7 @@ public class Alien extends Entity {
 
 	public Alien(float x, float y) {
 		super(x, y);
-		TheGame.aliens.add(this);
+		AlienAI.aliens.add(this);
 		Image img = ResourceManager.getImage("alien");
 		setGraphic(img);
 		setHitBox(0, 0, img.getWidth(), img.getHeight());
@@ -33,14 +33,17 @@ public class Alien extends Entity {
 	
 	@Override
 	public void update(GameContainer gx, int delta){
+		/*
 		//BROKEN CODE STARTS
 		
 		if (x >= 485){
 			y += 25;
+			x = 484;
 			going_right = false;
 		}
 		if (x <= 4){
 			y+= 25;
+			x = 5;
 			going_right = true;
 		}
 		
@@ -61,7 +64,7 @@ public class Alien extends Entity {
 			}
 			last_move = delta;
 		}
-		
+		*/
 	}
 
 }
