@@ -65,7 +65,10 @@ public class Ship extends Entity {
 				System.out.println(last_fire);
 				last_fire = delta;
 				bulletsonscreen++;
-			}	
+			}
+			if(TheGame.aliencount <=0){
+				System.exit(0);
+			} 
 		}
 	}
 }

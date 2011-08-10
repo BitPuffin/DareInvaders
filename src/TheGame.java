@@ -35,5 +35,12 @@ public class TheGame extends World {
 		Ship ship = new Ship(225,400);
 		add(ship);
 	}
+	
+	public void update(GameContainer gc, StateBasedGame game, int delta){
+		super(gc, game, delta);
+		if(TheGame.aliencount <=0 ){
+			System.exit(0);
+		} 
+	}
 
 }

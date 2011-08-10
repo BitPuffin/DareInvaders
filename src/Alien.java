@@ -27,9 +27,7 @@ public class Alien extends Entity {
 	
 	@Override
 	public void update(GameContainer gx, int delta){
-		if(TheGame.aliencount <=0){
-			System.exit(0);
-		}
+		
 	}
 
 }
