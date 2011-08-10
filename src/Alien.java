@@ -13,6 +13,7 @@ public class Alien extends Entity {
 
 	public Alien(float x, float y) {
 		super(x, y);
+		TheGame.aliens.add(this);
 		Image img = ResourceManager.getImage("alien");
 		setGraphic(img);
 		setHitBox(0, 0, img.getWidth(), img.getHeight());
@@ -22,6 +23,7 @@ public class Alien extends Entity {
 	@Override
 	public void collisionResponse(Entity other){
 		ME.world.remove(this);
+		TheGame.aliens.remove(this);
 		--TheGame.aliencount;
 	}
 	
