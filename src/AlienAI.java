@@ -9,7 +9,12 @@ public class AlienAI {
 	float last_move = 1;
 	float mega_alien = 0;
 	int movespeed = 25;
+	int downamount = 25;
 	
+	int maxright = 480;
+	int maxleft = 5;
+	
+	boolean AnyBoundrariesCrossed = false;
 	boolean going_right = true;
 	
 	private ArrayList<Alien> aliens;
@@ -28,6 +33,23 @@ public class AlienAI {
 	}
 	
 	public void move(){
+		
+		for(Alien a : aliens){
+			if (a.x >= maxright || a.x <= maxleft){
+				AnyBoundrariesCrossed = true;
+			}
+			else
+				AnyBoundrariesCrossed = false;
+			
+			if (AnyBoundrariesCrossed){
+				//I guess I need to loop again or it will only move the one in the current loop?
+				for(Alien b : aliens){
+				StepDown(b.y);
+				}
+			}
+		}
+		
+		/*
 		if (x >= 485){
 			y += 25;
 			x = 484;
@@ -56,8 +78,14 @@ public class AlienAI {
 			}
 			last_move = delta;
 		}
+		*/
 	}
 	
+	private float StepDown(float y) {
+		going_right = !going_right;
+		return y += downamount;
+	}
+
 	public void checkForWin() {
 		// TODO Auto-generated method stub
 		
