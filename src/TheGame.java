@@ -33,14 +33,14 @@ public class TheGame extends World {
 		for(int c = collumn; collumn < 400 ; collumn += 52){
 			Alien a = new Alien(collumn, row);
 			add(a);
-			ai.aliens.add(a);
+			ai.addAliens(a);
 		}
 		row = 65;
 		collumn = 5;
 		for(int c = collumn; collumn < 400 ; collumn += 52){
 			Alien a = new Alien(collumn, row);
 			add(a);
-			ai.aliens.add(a);
+			ai.addAliens(a);
 		}
 		
 		Ship ship = new Ship(225,400);
@@ -50,6 +50,9 @@ public class TheGame extends World {
 	public void update(GameContainer gc, StateBasedGame game, int delta) throws SlickException{
 		super.update(gc, game, delta);
 		ai.checkForWin(); 
+		ai.updateDelta(delta);
+		
+		
 	}
 
 }
