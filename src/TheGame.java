@@ -13,7 +13,6 @@ public class TheGame extends World {
 	public static ArrayList<Alien> aliens;
 	int collumn = 5;
 	int row = 10;
-	public static int aliencount = 0;
 	
 	public TheGame(int id, GameContainer container) {
 		super(id, container);
@@ -30,14 +29,12 @@ public class TheGame extends World {
 		for(int c = collumn; collumn < 400 ; collumn += 52){
 			Alien a = new Alien(collumn, row);
 			add(a);
-			aliencount++;
 		}
 		row = 65;
 		collumn = 5;
 		for(int c = collumn; collumn < 400 ; collumn += 52){
 			Alien a = new Alien(collumn, row);
 			add(a);
-			aliencount++;
 		}
 		
 		Ship ship = new Ship(225,400);
