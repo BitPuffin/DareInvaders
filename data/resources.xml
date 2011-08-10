@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- basedir -->
+	<basedir path="data" />
+	<!-- sounds -->
+	
+	<!-- songs -->
+	<!-- images -->
+	<image key="ship" file="ship.png" />
+	<image key="alien" file="alien.png" />
+	<image key="shot" file="shot.png" />
+	<!-- sheets -->
+	<!-- fonts -->
+</resources>
