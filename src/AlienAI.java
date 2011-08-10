@@ -8,4 +8,13 @@ public class AlienAI {
 	public AlienAI(){
 		aliens = new ArrayList<Alien>();
 	}
+	
+	public void move(){
+		
+	}
+	
+	public void checkForWin() {
+		// TODO Auto-generated method stub
+		
+	}
 }

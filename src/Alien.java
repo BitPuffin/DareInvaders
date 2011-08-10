@@ -27,7 +27,7 @@ public class Alien extends Entity {
 	@Override
 	public void collisionResponse(Entity other){
 		ME.world.remove(this);
-		TheGame.aliens.remove(this);
+		//TheGame.aliens.remove(this);
 	}
 	
 	@Override
